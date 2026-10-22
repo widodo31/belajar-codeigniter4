@@ -1,0 +1,40 @@
+# Environment dan konfigurasi rahasia
+.env
+
+# Dependensi Composer
+/vendor/
+
+# Folder sementara instalasi
+/ci4-temp/
+
+#File sementara aplikasi CodeIgniter
+/writable/cache/*
+!/writable/cache/index.html
+
+/writable/logs/*
+!/writable/logs/index.html
+
+/writable/session/*
+!/writable/session/index.html
+
+* IDE dan editor
+/.vscode/
+/nbproject/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/nbactions.xml
+/nb-configuration.xml
+/.nb-gradle/
+*.sublime-workspace
+*.sublime-project
+.phpintel
+
+# Hasil pengujian
+/results/
+/phpunit.xml
+
+#File sistem operasi
+.DS_Store
+Thumbs.db
