@@ -15,14 +15,24 @@ services:
       database.default.password: belajar_2026
       database.default.DBDriver: MySQLi
       database.default.port: 3306
+    
+  phpmyadmin:
+    image: phpmyadmin:latest
+    ports:
+      - "8091:80"
+    environment: 
+      PMA_HOST: db
+      PMA_PORT: 3306
+    depends_on:
+      - db
 
   db:
     image: mysql:8.4
     environment:
-      MYSQL_DATABASE: aplikasi
+      MYSQL_DATABASE: aplikasi_if
       MYSQL_USER: aplikasi_user
-      MYSQL_PASSWORD: belajar_2026
-      MYSQL_ROOT_PASSWORD: root_2026
+      MYSQL_PASSWORD: belajar_if_2026
+      MYSQL_ROOT_PASSWORD: root_if_2026
     ports:
       - "3309:3306"
     volumes:
